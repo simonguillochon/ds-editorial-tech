@@ -1,0 +1,74 @@
+# Couleurs
+
+## Philosophie
+
+Une seule couleur signature — un vermillon brûlé contemporain, ni Hermès littéral ni rouge alarmant — posée sur une base de neutres chauds (gris très subtilement teintés de brun) ponctuée de crème. Le crème agit comme un « blanc papier » qui renforce la dimension éditoriale.
+
+## Palette signature — Vermillon
+
+| Token | Hex | Usage |
+| --- | --- | --- |
+| `--color-primary-50` | `#FDF1ED` | Fonds très subtils, hover sur fonds clairs |
+| `--color-primary-100` | `#FBDDD3` | Fonds d'accent doux |
+| `--color-primary-200` | `#F7B8A4` | Décoratif, illustrations |
+| `--color-primary-300` | `#F39174` | Décoratif, états hover |
+| `--color-primary-400` | `#EE6A47` | Variations chaudes |
+| `--color-primary-500` | **`#E8482A`** | **Couleur signature — soulignements, accents, CTA principal** |
+| `--color-primary-600` | `#C73A1F` | Hover sur primary, états pressed |
+| `--color-primary-700` | `#9F2D17` | Texte primary sur fond clair (lisibilité) |
+| `--color-primary-800` | `#76210F` | Texte primary dense |
+| `--color-primary-900` | `#4A1408` | Très contrasté, peu utilisé |
+
+## Palette neutre — Gris chauds
+
+| Token | Hex | Usage |
+| --- | --- | --- |
+| `--color-neutral-0` | `#FFFFFF` | Surface ultime, peu utilisée (préférer le crème) |
+| `--color-neutral-50` | `#FAFAF8` | Surface alternative très subtile |
+| `--color-neutral-100` | `#F5F0E8` | **Crème — fond principal en mode clair** |
+| `--color-neutral-200` | `#E8E5DF` | Bordures subtiles, dividers |
+| `--color-neutral-300` | `#C4C2BD` | Bordures, états disabled |
+| `--color-neutral-400` | `#8A8783` | Texte secondaire, captions |
+| `--color-neutral-500` | `#6B6864` | Texte tertiaire |
+| `--color-neutral-600` | `#52504C` | Texte body alternatif |
+| `--color-neutral-700` | `#3A3835` | Texte de corps en mode clair |
+| `--color-neutral-800` | `#2A2724` | Surfaces dark (cards en mode sombre) |
+| `--color-neutral-900` | `#1A1816` | **Surface principale en mode sombre** |
+| `--color-neutral-950` | `#0F0E0D` | **Texte principal en mode clair / fond ultime mode sombre** |
+
+## Couleurs sémantiques
+
+Toutes désaturées pour ne pas concurrencer la couleur signature.
+
+| Token | Hex | Usage |
+| --- | --- | --- |
+| `--color-success` | `#2D6A4F` | Confirmations, validations |
+| `--color-warning` | `#B8860B` | Avertissements, états intermédiaires |
+| `--color-error` | `#A52121` | Erreurs (distinct du primary) |
+| `--color-info` | `#3A6EA5` | Informations contextuelles |
+
+## Tokens sémantiques (à utiliser dans le code)
+
+Toujours référencer les tokens sémantiques plutôt que les valeurs littérales — ils s'adaptent automatiquement au mode clair/sombre.
+
+> Les valeurs canoniques (primitives + tokens sémantiques clair/sombre) vivent dans [`tokens/tokens.css`](../../tokens/tokens.css). Ne pas redéfinir de hex ici.
+
+| Token sémantique | Mode clair | Mode sombre |
+| --- | --- | --- |
+| `--surface-primary` | `neutral-100` (#F5F0E8) | `neutral-950` (#0F0E0D) |
+| `--surface-secondary` | `neutral-50` (#FAFAF8) | `neutral-900` (#1A1816) |
+| `--surface-elevated` | `neutral-0` (#FFFFFF) | `neutral-800` (#2A2724) |
+| `--surface-inverse` | `neutral-950` (#0F0E0D) | `neutral-100` (#F5F0E8) |
+| `--text-primary` | `neutral-950` (#0F0E0D) | `neutral-100` (#F5F0E8) |
+| `--text-secondary` | `neutral-600` (#52504C) | `neutral-300` (#C4C2BD) |
+| `--text-tertiary` | `neutral-400` (#8A8783) | `neutral-400` (#8A8783) |
+| `--text-inverse` | `neutral-100` (#F5F0E8) | `neutral-950` (#0F0E0D) |
+| `--text-accent` | `primary-500` (#E8482A) | `primary-400` (#EE6A47) |
+| `--border-subtle` | `neutral-200` (#E8E5DF) | `neutral-800` (#2A2724) |
+| `--border-default` | `neutral-300` (#C4C2BD) | `neutral-700` (#3A3835) |
+| `--border-accent` | `primary-500` (#E8482A) | `primary-400` (#EE6A47) |
+| `--accent` | `primary-500` (#E8482A) | `primary-400` (#EE6A47) |
+| `--accent-hover` | `primary-600` (#C73A1F) | `primary-300` (#F39174) |
+| `--accent-subtle` | `primary-50` (#FDF1ED) | `primary-900` (#4A1408) |
+
+En mode sombre, `--text-accent` et `--accent` passent à `primary-400` (#EE6A47), légèrement éclairci pour préserver le contraste.
