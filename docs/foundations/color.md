@@ -46,6 +46,10 @@ Toutes désaturées pour ne pas concurrencer la couleur signature.
 | `--color-warning` | `#B8860B` | Avertissements, états intermédiaires |
 | `--color-error` | `#A52121` | Erreurs (distinct du primary) |
 | `--color-info` | `#3A6EA5` | Informations contextuelles |
+| `--color-success-dark` | `#6FBF95` | Variante éclaircie de success pour le mode sombre |
+| `--color-error-dark` | `#E57373` | Variante éclaircie de error pour le mode sombre |
+
+Les variantes `-dark` existent parce que `success` et `error` tombent sous 3:1 sur `--surface-elevated` en mode sombre (#2A2724) : 2,3:1 et 2,0:1. Éclaircies, elles y atteignent 6,8:1 et 5,0:1. Le rouge sombre reste distinct du vermillon `--accent` du mode sombre (#EE6A47).
 
 ## Tokens sémantiques (à utiliser dans le code)
 
@@ -70,5 +74,11 @@ Toujours référencer les tokens sémantiques plutôt que les valeurs littérale
 | `--accent` | `primary-500` (#E8482A) | `primary-400` (#EE6A47) |
 | `--accent-hover` | `primary-600` (#C73A1F) | `primary-300` (#F39174) |
 | `--accent-subtle` | `primary-50` (#FDF1ED) | `primary-900` (#4A1408) |
+| `--feedback-success` | `success` (#2D6A4F) | `success-dark` (#6FBF95) |
+| `--feedback-warning` | `warning` (#B8860B) | `warning` (#B8860B) |
+| `--feedback-error` | `error` (#A52121) | `error-dark` (#E57373) |
+| `--feedback-info` | `info` (#3A6EA5) | `info` (#3A6EA5) |
 
 En mode sombre, `--text-accent` et `--accent` passent à `primary-400` (#EE6A47), légèrement éclairci pour préserver le contraste.
+
+Les tokens `--feedback-*` servent aux retours d'état (bordure du Message, par exemple). `warning` et `info` n'ont pas encore de variante sombre : à traiter quand un composant les utilisera.

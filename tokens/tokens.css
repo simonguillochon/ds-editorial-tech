@@ -39,6 +39,8 @@
   --color-warning: #B8860B;
   --color-error:   #A52121;
   --color-info:    #3A6EA5;
+  --color-success-dark: #6FBF95; /* variante mode sombre */
+  --color-error-dark:   #E57373; /* variante mode sombre */
 
   /* ─── Tokens sémantiques — Mode clair ─── */
   --surface-primary:   var(--color-neutral-100); /* #F5F0E8 */
@@ -59,6 +61,11 @@
   --accent:        var(--color-primary-500); /* #E8482A */
   --accent-hover:  var(--color-primary-600); /* #C73A1F */
   --accent-subtle: var(--color-primary-50);  /* #FDF1ED */
+
+  --feedback-success: var(--color-success); /* #2D6A4F */
+  --feedback-warning: var(--color-warning); /* #B8860B */
+  --feedback-error:   var(--color-error);   /* #A52121 */
+  --feedback-info:    var(--color-info);    /* #3A6EA5 */
 
   /* ─── Typographie ─── */
   --font-serif: "Instrument Serif", Georgia, serif;
@@ -120,4 +127,7 @@
   --accent:        var(--color-primary-400); /* #EE6A47 */
   --accent-hover:  var(--color-primary-300); /* #F39174 */
   --accent-subtle: var(--color-primary-900); /* #4A1408 */
+
+  --feedback-success: var(--color-success-dark); /* #6FBF95 */
+  --feedback-error:   var(--color-error-dark);   /* #E57373 */
 }
