@@ -41,6 +41,7 @@
   --color-info:    #3A6EA5;
   --color-success-dark: #6FBF95; /* variante mode sombre */
   --color-error-dark:   #E57373; /* variante mode sombre */
+  --color-warning-light: #8A6508; /* variante mode clair */
 
   /* ─── Tokens sémantiques — Mode clair ─── */
   --surface-primary:   var(--color-neutral-100); /* #F5F0E8 */
@@ -63,7 +64,7 @@
   --accent-subtle: var(--color-primary-50);  /* #FDF1ED */
 
   --feedback-success: var(--color-success); /* #2D6A4F */
-  --feedback-warning: var(--color-warning); /* #B8860B */
+  --feedback-warning: var(--color-warning-light); /* #8A6508 */
   --feedback-error:   var(--color-error);   /* #A52121 */
   --feedback-info:    var(--color-info);    /* #3A6EA5 */
 
@@ -129,5 +130,6 @@
   --accent-subtle: var(--color-primary-900); /* #4A1408 */
 
   --feedback-success: var(--color-success-dark); /* #6FBF95 */
+  --feedback-warning: var(--color-warning);      /* #B8860B */
   --feedback-error:   var(--color-error-dark);   /* #E57373 */
 }

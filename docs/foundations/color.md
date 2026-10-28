@@ -48,8 +48,11 @@ Toutes désaturées pour ne pas concurrencer la couleur signature.
 | `--color-info` | `#3A6EA5` | Informations contextuelles |
 | `--color-success-dark` | `#6FBF95` | Variante éclaircie de success pour le mode sombre |
 | `--color-error-dark` | `#E57373` | Variante éclaircie de error pour le mode sombre |
+| `--color-warning-light` | `#8A6508` | Variante assombrie de warning pour le mode clair |
 
 Les variantes `-dark` existent parce que `success` et `error` tombent sous 3:1 sur `--surface-elevated` en mode sombre (#2A2724) : 2,3:1 et 2,0:1. Éclaircies, elles y atteignent 6,8:1 et 5,0:1. Le rouge sombre reste distinct du vermillon `--accent` du mode sombre (#EE6A47).
+
+Pour `warning`, le problème est inverse : #B8860B ne tient que 3,25:1 sur `--surface-elevated` en mode clair (#FFFFFF), sous les 4,5:1 requis pour un texte Body S. La variante `-light` (#8A6508) y atteint 5,3:1 ; en mode sombre, la valeur d'origine tient 4,6:1 et reste en place.
 
 ## Tokens sémantiques (à utiliser dans le code)
 
@@ -75,10 +78,10 @@ Toujours référencer les tokens sémantiques plutôt que les valeurs littérale
 | `--accent-hover` | `primary-600` (#C73A1F) | `primary-300` (#F39174) |
 | `--accent-subtle` | `primary-50` (#FDF1ED) | `primary-900` (#4A1408) |
 | `--feedback-success` | `success` (#2D6A4F) | `success-dark` (#6FBF95) |
-| `--feedback-warning` | `warning` (#B8860B) | `warning` (#B8860B) |
+| `--feedback-warning` | `warning-light` (#8A6508) | `warning` (#B8860B) |
 | `--feedback-error` | `error` (#A52121) | `error-dark` (#E57373) |
 | `--feedback-info` | `info` (#3A6EA5) | `info` (#3A6EA5) |
 
 En mode sombre, `--text-accent` et `--accent` passent à `primary-400` (#EE6A47), légèrement éclairci pour préserver le contraste.
 
-Les tokens `--feedback-*` servent aux retours d'état (bordure du Message, par exemple). `warning` et `info` n'ont pas encore de variante sombre : à traiter quand un composant les utilisera.
+Les tokens `--feedback-*` servent aux retours d'état (bordure du Message, par exemple). `info` n'a pas encore été vérifié en contraste : à traiter quand un composant l'utilisera.
