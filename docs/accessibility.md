@@ -9,8 +9,10 @@
 | `text-tertiary` sur `surface-primary` (clair) | 3.5:1 | AA Large | **Texte ≥ 18px uniquement** |
 | `--accent` (`#E8482A`) sur `surface-primary` (clair) | 3.7:1 | AA Large | **Texte ≥ 18px ou bold ≥ 14px / non-text UI** |
 | `--accent` sur `--surface-inverse` (sombre) | 4.5:1 | AA | Tout texte |
+| `--text-accent` (`#9F2D17`) sur `surface-primary` (clair) | 6.5:1 | AA | Tout texte |
+| `--text-accent` (`#EE6A47`) sur `surface-primary` (sombre) | 6.2:1 | AA | Tout texte |
 
-**Règle critique** : la couleur primary `#E8482A` ne doit **jamais** être utilisée pour des paragraphes de corps de texte sur fond clair — son contraste est insuffisant. Elle est réservée aux titres, aux CTA, aux soulignements et aux éléments graphiques. Pour du texte de lien inline sur fond clair, utiliser `--color-primary-700` (`#9F2D17`).
+**Règle critique** : la couleur primary `#E8482A` ne doit **jamais** être utilisée pour des paragraphes de corps de texte sur fond clair — son contraste est insuffisant. Elle est réservée aux titres, aux CTA, aux soulignements et aux éléments graphiques. Pour du texte de lien ou d'accent, utiliser `--text-accent`, qui vaut `--color-primary-700` (`#9F2D17`) en mode clair.
 
 ## Tailles tactiles
 
