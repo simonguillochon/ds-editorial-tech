@@ -12,7 +12,7 @@ Les composants sont organisés en trois niveaux (atomes · patterns portfolio ·
 | Field label | — | static | 1 |
 | Checkbox | `checked` : false / true | default / hover / focus / disabled | 8 |
 | Choice Group | composition de Buttons sm secondary | none / selected / disabled | 3 |
-| Message | `variant` : success / error | static | 2 |
+| Message | `variant` : success / warning / error | static | 3 |
 | Tag | `variant` : neutral / accent · `style` : solid / outline · `size` : sm / md | static | 8 |
 | Avatar | `size` : xs (24) / s (32) / m (40) / l (64) | static | 4 |
 | Link | — | default / hover | 2 |
@@ -31,7 +31,7 @@ Les composants sont organisés en trois niveaux (atomes · patterns portfolio ·
 - **Field label** — ajouté pour les formulaires (Readme Capture, US-01). Text style Caption sur `text/secondary`, 8px (`--space-2`) au-dessus du champ. En code : élément `label` relié au champ.
 - **Checkbox** — ajouté pour les sélections multiples (Readme Capture, US-02). Case de 20px, rayon `sm`, libellé Body sur `text/primary` à droite (8px). `checked` est une propriété distincte de l'état, pour que chaque état (hover, focus, disabled) existe coché et non coché. Non cochée : fond `surface/elevated`, bordure `border/default` (`border/accent` au hover). Cochée : fond `accent/default` (`accent/hover` au hover), coche `check` sur `text/inverse`. Focus : anneau 2px `accent`, décalé de 2px, identique aux autres atomes. En code : `input type="checkbox"` relié à son libellé, navigation par Tab, cochage par Espace, cible tactile 44 × 44px sur mobile.
 - **Choice Group** — ajouté pour les choix exclusifs sans valeur par défaut (Readme Capture, US-02). Rangée de Buttons `size=sm` `variant=secondary`, espacés de 8px. L'option choisie garde le style secondary et reçoit une bordure 2px `border/accent` — plutôt qu'un Button primary, pour ne pas multiplier les aplats vermillon quand plusieurs groupes cohabitent (cf. principe « une seule couleur signature, avec parcimonie »). En code : `role="radiogroup"` sur le conteneur, `role="radio"` et `aria-checked` sur chaque bouton, flèches pour passer d'une option à l'autre.
-- **Message** — ajouté pour les retours d'action (Readme Capture, US-01). Bloc de 320px, padding 12px (`--space-3`), rayon `sm`, fond `surface/elevated`, bordure 1px et texte Body S de la même couleur, `feedback/success` ou `feedback/error`. Contraste du texte vérifié en Body S (≥ 4,5:1) : success 6,4:1 en clair et 6,8:1 en sombre, error 7,4:1 en clair et 5,0:1 en sombre, sur `surface/elevated`. Le texte porte seul le sens du message : la couleur de bordure ne doit jamais être l'unique indice. En code : `role="status"` pour success, `role="alert"` pour error.
+- **Message** — ajouté pour les retours d'action (Readme Capture, US-01). Bloc de 320px, padding 12px (`--space-3`), rayon `sm`, fond `surface/elevated`, bordure 1px et texte Body S de la même couleur, `feedback/success`, `feedback/warning` ou `feedback/error`. Contraste du texte vérifié en Body S (≥ 4,5:1) sur `surface/elevated` : success 6,4:1 en clair et 6,8:1 en sombre, warning 5,3:1 en clair et 4,6:1 en sombre, error 7,4:1 en clair et 5,0:1 en sombre. Le texte porte seul le sens du message : la couleur de bordure ne doit jamais être l'unique indice. En code : `role="status"` pour success et warning, `role="alert"` pour error.
 
 ## Icônes
 
