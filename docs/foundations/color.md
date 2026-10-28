@@ -70,7 +70,7 @@ Toujours référencer les tokens sémantiques plutôt que les valeurs littérale
 | `--text-secondary` | `neutral-600` (#52504C) | `neutral-300` (#C4C2BD) |
 | `--text-tertiary` | `neutral-400` (#8A8783) | `neutral-400` (#8A8783) |
 | `--text-inverse` | `neutral-100` (#F5F0E8) | `neutral-950` (#0F0E0D) |
-| `--text-accent` | `primary-500` (#E8482A) | `primary-400` (#EE6A47) |
+| `--text-accent` | `primary-700` (#9F2D17) | `primary-400` (#EE6A47) |
 | `--border-subtle` | `neutral-200` (#E8E5DF) | `neutral-800` (#2A2724) |
 | `--border-default` | `neutral-300` (#C4C2BD) | `neutral-700` (#3A3835) |
 | `--border-accent` | `primary-500` (#E8482A) | `primary-400` (#EE6A47) |
@@ -83,5 +83,7 @@ Toujours référencer les tokens sémantiques plutôt que les valeurs littérale
 | `--feedback-info` | `info` (#3A6EA5) | `info` (#3A6EA5) |
 
 En mode sombre, `--text-accent` et `--accent` passent à `primary-400` (#EE6A47), légèrement éclairci pour préserver le contraste.
+
+En mode clair, `--text-accent` utilise `primary-700` (#9F2D17) et non la couleur signature : à 14–18px (Button `variant=link`, Tag accent), `primary-500` ne tenait que 3,9:1 sur `--surface-elevated` et 3,4:1 sur `--surface-primary`. `primary-700` y atteint 7,3:1 et 6,5:1. Le vermillon signature reste porté par `--accent` (aplats, CTA principal) et par le soulignement de la [Signature 2](../signatures.md).
 
 Les tokens `--feedback-*` servent aux retours d'état (bordure du Message, par exemple). `info` n'a pas encore été vérifié en contraste : à traiter quand un composant l'utilisera.
