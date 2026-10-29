@@ -66,6 +66,7 @@ Toujours référencer les tokens sémantiques plutôt que les valeurs littérale
 | `--surface-secondary` | `neutral-50` (#FAFAF8) | `neutral-900` (#1A1816) |
 | `--surface-elevated` | `neutral-0` (#FFFFFF) | `neutral-800` (#2A2724) |
 | `--surface-inverse` | `neutral-950` (#0F0E0D) | `neutral-100` (#F5F0E8) |
+| `--surface-muted` | `neutral-200` (#E8E5DF) | `neutral-800` (#2A2724) |
 | `--text-primary` | `neutral-950` (#0F0E0D) | `neutral-100` (#F5F0E8) |
 | `--text-secondary` | `neutral-600` (#52504C) | `neutral-300` (#C4C2BD) |
 | `--text-tertiary` | `neutral-400` (#8A8783) | `neutral-400` (#8A8783) |
@@ -75,6 +76,7 @@ Toujours référencer les tokens sémantiques plutôt que les valeurs littérale
 | `--border-subtle` | `neutral-200` (#E8E5DF) | `neutral-800` (#2A2724) |
 | `--border-default` | `neutral-300` (#C4C2BD) | `neutral-700` (#3A3835) |
 | `--border-accent` | `primary-500` (#E8482A) | `primary-400` (#EE6A47) |
+| `--border-accent-strong` | `primary-700` (#9F2D17) | `primary-400` (#EE6A47) |
 | `--accent` | `primary-500` (#E8482A) | `primary-400` (#EE6A47) |
 | `--accent-hover` | `primary-400` (#EE6A47) | `primary-300` (#F39174) |
 | `--accent-subtle` | `primary-50` (#FDF1ED) | `primary-900` (#4A1408) |
@@ -88,5 +90,7 @@ En mode sombre, `--text-accent` et `--accent` passent à `primary-400` (#EE6A47)
 En mode clair, `--text-accent` utilise `primary-700` (#9F2D17) et non la couleur signature : à 14–18px (Button `variant=link`, Tag accent), `primary-500` ne tenait que 3,9:1 sur `--surface-elevated` et 3,4:1 sur `--surface-primary`. `primary-700` y atteint 7,3:1 et 6,5:1. Le vermillon signature reste porté par `--accent` (aplats, CTA principal) et par le soulignement de la [Signature 2](../signatures.md).
 
 `--text-on-accent` sert au texte et aux icônes posés sur un aplat `--accent` (libellé du Button primary, coche de la Checkbox). Il reste foncé dans les deux modes : un texte crème ne tient que 3,4:1 sur le vermillon signature en mode clair, un texte foncé y atteint 5,0:1 (6,2:1 en mode sombre). Pour la même raison, `--accent-hover` éclaircit l'accent en mode clair (`primary-400`, 6,2:1 avec `--text-on-accent`) au lieu de l'assombrir, comme il le fait déjà en mode sombre.
+
+`--surface-muted` est un fond neutre marqué pour les petits éléments posés sur la page (Tag neutral solid) : il reprend la valeur de `--border-subtle`, mais sous un nom de surface. `--border-accent-strong` est une bordure accent qui suit `--text-accent`, pour qu'un élément au texte accent ait une bordure de la même couleur (Tag accent outline, 6,5:1 en clair et 6,2:1 en sombre sur `--surface-primary`).
 
 Les tokens `--feedback-*` servent aux retours d'état (bordure du Message, par exemple). `info` n'a pas encore été vérifié en contraste : à traiter quand un composant l'utilisera.
