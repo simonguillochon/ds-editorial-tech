@@ -37,7 +37,7 @@ Ce dépôt fait foi pour toute décision de design ou d'implémentation. Toute d
 | Principes & positionnement | ✅ Documenté |
 | Foundations (couleurs, typo, spacing, radius, shadows, grille) | ✅ Documenté |
 | Tokens CSS (mode clair + sombre) | ✅ Exportés |
-| Specs composants | 🟡 En cours (atoms construits dans Figma) |
+| Specs composants | ✅ Documenté (atoms : anatomie, états, contrastes, comportement en code et écarts connus) |
 | Code des composants | ⬜ À venir |
 | Pipeline de tokens automatisé | ⬜ À venir (copie manuelle pour l'instant) |
 
