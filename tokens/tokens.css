@@ -54,13 +54,14 @@
   --text-tertiary:  var(--color-neutral-400); /* #8A8783 */
   --text-inverse:   var(--color-neutral-100); /* #F5F0E8 */
   --text-accent:    var(--color-primary-700); /* #9F2D17 — assombri pour tenir 4,5:1 */
+  --text-on-accent: var(--color-neutral-950); /* #0F0E0D — texte posé sur un aplat accent */
 
   --border-subtle:  var(--color-neutral-200); /* #E8E5DF */
   --border-default: var(--color-neutral-300); /* #C4C2BD */
   --border-accent:  var(--color-primary-500); /* #E8482A */
 
   --accent:        var(--color-primary-500); /* #E8482A */
-  --accent-hover:  var(--color-primary-600); /* #C73A1F */
+  --accent-hover:  var(--color-primary-400); /* #EE6A47 — le hover éclaircit, comme en mode sombre */
   --accent-subtle: var(--color-primary-50);  /* #FDF1ED */
 
   --feedback-success: var(--color-success); /* #2D6A4F */
@@ -120,6 +121,7 @@
   --text-tertiary:  var(--color-neutral-400); /* #8A8783 */
   --text-inverse:   var(--color-neutral-950); /* #0F0E0D */
   --text-accent:    var(--color-primary-400); /* #EE6A47 — éclairci pour le contraste */
+  --text-on-accent: var(--color-neutral-950); /* #0F0E0D */
 
   --border-subtle:  var(--color-neutral-800); /* #2A2724 */
   --border-default: var(--color-neutral-700); /* #3A3835 */

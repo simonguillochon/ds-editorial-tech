@@ -24,9 +24,14 @@ Base 16px. Mobile-first — les tailles indiquées sont les tailles desktop, à 
 | Body L | 18px | 17px | Inter | Regular (400) | 1.6 | 0 |
 | Body | 16px | 16px | Inter | Regular (400) | 1.6 | 0 |
 | Body S | 14px | 14px | Inter | Regular (400) | 1.5 | 0 |
+| Label L | 18px | 18px | Inter | Medium (500) | 1.2 | 0 |
+| Label | 16px | 16px | Inter | Medium (500) | 1.2 | 0 |
+| Label S | 14px | 14px | Inter | Medium (500) | 1.2 | 0 |
 | Caption | 13px | 13px | Inter | Medium (500) | 1.4 | 0.01em |
 | Overline | 12px | 12px | Inter | Semibold (600) | 1.3 | 0.08em (uppercase) |
 | Mono | 14px | 14px | Geist Mono | Regular | 1.5 | 0 |
+
+Les styles **Label** sont réservés aux libellés d'action (Button sm / md / lg) : même famille que le corps, en Medium, avec un interlignage serré pour centrer le texte dans une hauteur fixe.
 
 ## Italiques
 
